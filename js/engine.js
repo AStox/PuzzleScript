@@ -2217,7 +2217,7 @@ function processInput(dir,dontCheckWin,dontModify) {
 	 		consolePrint('Turn starts with no input.')
 	 	} else {
 	 		consolePrint('=======================');
-			consolePrint('Turn starts with input of ' + ['up','left','down','right','action'][dir]+'.');
+			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','lightup','lightleft','lightdown','lightright'][dir]+'.');
 	 	}
 	}
 

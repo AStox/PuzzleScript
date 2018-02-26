@@ -364,8 +364,8 @@ function onKeyDown(event) {
 
     event = event || window.event;
 
-	// Prevent arrows/space from scrolling page
-	if ((!IDE) && ([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1)) {
+	// Prevent arrows/space from scrolling page     MY CHANGE: Added WASD keys
+	if ((!IDE) && ([32, 37, 38, 39, 40, 87, 65, 83, 68].indexOf(event.keyCode) > -1)) {
 		prevent(event);
 	}
 
@@ -489,34 +489,46 @@ function checkKey(e,justPressed) {
     }
     var inputdir=-1;
     switch(e.keyCode) {
-        case 65://a
-        case 37: //left
+		case 37: //left
         {
-//            window.console.log("LEFT");
+			//            window.console.log("LEFT");
             inputdir=1;
-        break;
+			break;
         }
         case 38: //up
-        case 87: //w
         {
-//            window.console.log("UP");
+			//            window.console.log("UP");
             inputdir=0;
-        break;
+			break;
         }
-        case 68://d
         case 39: //right
         {
-//            window.console.log("RIGHT");
+			//            window.console.log("RIGHT");
             inputdir=3;
-        break;
+			break;
         }
-        case 83://s
         case 40: //down
         {
-//            window.console.log("DOWN");
+			//            window.console.log("DOWN");
             inputdir=2;
-        break;
+			break;
         }
+		case 87: //w
+		{
+			inputdir=5;
+		}
+		case 65://a
+		{
+			inputdir=6;
+		}
+		case 83://s
+		{
+			inputdir=7;
+		}
+		case 68://d
+		{
+			inputdir=8;
+		}
         case 13://enter
         case 32://space
         case 67://c
