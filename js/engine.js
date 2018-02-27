@@ -167,7 +167,6 @@ function generateTitleScreen()
 	if (state.metadata.title!==undefined) {
 		title=state.metadata.title;
 	}
-
 	if (titleMode===0) {
 		if (titleSelected) {
 			titleImage = deepClone(titletemplate_firstgo_selected);
@@ -563,6 +562,8 @@ function level4Serialization() {
 }
 
 function setGameState(_state, command, randomseed) {
+	window.console.log(_state);
+	window.console.log(command);
 	oldflickscreendat=[];
 	timer=0;
 	autotick=0;
@@ -2225,7 +2226,6 @@ function processInput(dir,dontCheckWin,dontModify) {
 	 		consolePrint('Turn starts with no input.')
 	 	} else {
 			consolePrint('=======================');
-			consolePrint(dir);
 			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','actionup','actiondown','actionleft','actionright'][dir]+'.');
 	 	}
 	}

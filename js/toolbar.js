@@ -241,7 +241,7 @@ function post_to_url(path, params, method) {
 function exportClick() {
 	var sourceCode = editor.getValue();
 
-	compile("restart");
+	compile(["restart"]);
 
 	var sourceString = JSON.stringify(sourceCode);
 	

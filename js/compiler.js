@@ -2094,6 +2094,7 @@ function removeDuplicateRules(state) {
 	}
 	console.log("rule count after = " +state.rules.length);
 }
+
 function generateLoopPoints(state) {
 	var loopPoint={};
 	var loopPointIndex=0;
@@ -2418,6 +2419,7 @@ function formatHomePage(state){
 var MAX_ERRORS=5;
 function loadFile(str) {
 	window.console.log('loadFile');
+	window.console.log(str);
 
 	var processor = new codeMirrorFn();
 	var state = processor.startState();
@@ -2445,8 +2447,10 @@ function loadFile(str) {
 	levelsToArray(state);
 	rulesToArray(state);
 
+	window.console.log(state);
 	removeDuplicateRules(state);
-
+	window.console.log(state);
+	
 	if (debugMode) {
 		printRules(state);
 	}
@@ -2522,6 +2526,7 @@ function compile(command,text,randomseed) {
 	{
 		var state = loadFile(text);
 //		consolePrint(JSON.stringify(state));
+		window.console.log(JSON.stringify(state));
 	} finally {
 		compiling = false;
 	}
@@ -2537,6 +2542,7 @@ function compile(command,text,randomseed) {
 
 	if (errorCount>0) {
 		consoleError('<span class="systemMessage">Errors detected during compilation, the game may not work correctly.</span>');
+		window.console.log("error");
 	}
 	else {
 		var ruleCount=0;
@@ -2553,6 +2559,7 @@ function compile(command,text,randomseed) {
 
 		}
 	}
+	window.console.log(state)
 	setGameState(state,command,randomseed);
 
 	clearInputHistory();
