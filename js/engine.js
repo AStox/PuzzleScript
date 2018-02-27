@@ -956,7 +956,11 @@ var dirMasksDelta = {
      4:[-1,0],//'left'  :
      8:[1,0],//'right' :
      15:[0,0],//'?' :
-     16:[0,0],//'action' :
+	 16:[0,0],//'action' :
+	 32: [0,0], // 'lightup' :
+	 64: [0,0], // 'lightdown' :
+	 128: [0,0], // 'lightleft' :
+	 256: [0,0], // 'lightright' :
      3:[0,0]//'no'
 };
 
@@ -966,7 +970,11 @@ var dirMaskName = {
      4:'left'  ,
      8:'right',
      15:'?' ,
-     16:'action',
+	 16:'action',
+	 32: 'lightup',
+	 64: 'lightdown',
+	 128: 'lightleft',
+	 256: 'lightright',
      3:'no'
 };
 
@@ -2216,8 +2224,9 @@ function processInput(dir,dontCheckWin,dontModify) {
 	 	if (dir===-1) {
 	 		consolePrint('Turn starts with no input.')
 	 	} else {
-	 		consolePrint('=======================');
-			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','lightup','lightleft','lightdown','lightright'][dir]+'.');
+			consolePrint('=======================');
+			consolePrint(dir);
+			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','lightup','lightdown','lightleft','lightright'][dir]+'.');
 	 	}
 	}
 
@@ -2250,6 +2259,26 @@ function processInput(dir,dontCheckWin,dontModify) {
 	            case 4://action
 	            {
 	                dir=parseInt('10000', 2);;
+	                break;
+				}
+				case 5://lightup
+	            {
+	                dir=parseInt('100000', 2);;
+	                break;
+				}
+				case 6://lightdown
+	            {
+	                dir=parseInt('1000000', 2);;
+	                break;
+				}
+				case 7://lightleft
+	            {
+	                dir=parseInt('10000000', 2);;
+	                break;
+				}
+				case 8://lightright
+	            {
+	                dir=parseInt('100000000', 2);;
 	                break;
 	            }
 	        }

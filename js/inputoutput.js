@@ -516,18 +516,22 @@ function checkKey(e,justPressed) {
 		case 87: //w
 		{
 			inputdir=5;
-		}
-		case 65://a
-		{
-			inputdir=6;
+			break;
 		}
 		case 83://s
 		{
+			inputdir=6;
+			break;
+		}
+		case 65://a
+		{
 			inputdir=7;
+			break;
 		}
 		case 68://d
 		{
 			inputdir=8;
+			break;
 		}
         case 13://enter
         case 32://space
