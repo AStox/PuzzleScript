@@ -957,10 +957,10 @@ var dirMasksDelta = {
      8:[1,0],//'right' :
      15:[0,0],//'?' :
 	 16:[0,0],//'action' :
-	 32: [0,0], // 'lightup' :
-	 64: [0,0], // 'lightdown' :
-	 128: [0,0], // 'lightleft' :
-	 256: [0,0], // 'lightright' :
+	 32: [0,0], // 'actionup' :
+	 64: [0,0], // 'actiondown' :
+	 128: [0,0], // 'actionleft' :
+	 256: [0,0], // 'actionright' :
      3:[0,0]//'no'
 };
 
@@ -971,10 +971,10 @@ var dirMaskName = {
      8:'right',
      15:'?' ,
 	 16:'action',
-	 32: 'lightup',
-	 64: 'lightdown',
-	 128: 'lightleft',
-	 256: 'lightright',
+	 32: 'actionup',
+	 64: 'actiondown',
+	 128: 'actionleft',
+	 256: 'actionright',
      3:'no'
 };
 
@@ -2226,7 +2226,7 @@ function processInput(dir,dontCheckWin,dontModify) {
 	 	} else {
 			consolePrint('=======================');
 			consolePrint(dir);
-			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','lightup','lightdown','lightleft','lightright'][dir]+'.');
+			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','actionup','actiondown','actionleft','actionright'][dir]+'.');
 	 	}
 	}
 
@@ -2261,22 +2261,22 @@ function processInput(dir,dontCheckWin,dontModify) {
 	                dir=parseInt('10000', 2);;
 	                break;
 				}
-				case 5://lightup
+				case 5://actionup
 	            {
 	                dir=parseInt('100000', 2);;
 	                break;
 				}
-				case 6://lightdown
+				case 6://actiondown
 	            {
 	                dir=parseInt('1000000', 2);;
 	                break;
 				}
-				case 7://lightleft
+				case 7://actionleft
 	            {
 	                dir=parseInt('10000000', 2);;
 	                break;
 				}
-				case 8://lightright
+				case 8://actionright
 	            {
 	                dir=parseInt('100000000', 2);;
 	                break;
