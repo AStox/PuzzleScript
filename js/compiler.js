@@ -483,7 +483,7 @@ function levelsToArray(state) {
 var directionaggregates = {
 	'horizontal' : ['left', 'right'],
 	'vertical' : ['up', 'down'],
-	'moving' : ['up', 'down', 'left', 'right', 'action'],
+	'moving' : ['up', 'down', 'left', 'right', 'action', 'actionup', 'actiondown', 'actionleft', 'actionright'],
 	'orthogonal' : ['up', 'down', 'left', 'right'],
 	'perpendicular' : ['^','v'],
 	'parallel' : ['<','>']
@@ -492,7 +492,7 @@ var directionaggregates = {
 var relativeDirections = ['^', 'v', '<', '>','horizontal','vertical'];
 var simpleAbsoluteDirections = ['up', 'down', 'left', 'right'];
 var simpleRelativeDirections = ['^', 'v', '<', '>'];
-var reg_directions_only = /^(\>|\<|\^|v|up|down|left|right|moving|stationary|no|randomdir|random|horizontal|vertical|orthogonal|perpendicular|parallel|action)$/;
+var reg_directions_only = /^(\>|\<|\^|v|up|down|left|right|moving|stationary|no|randomdir|random|horizontal|vertical|orthogonal|perpendicular|parallel|action|actionup|actiondown|actionleft|actionright)$/;
 //redeclaring here, i don't know why
 var commandwords = ["sfx0","sfx1","sfx2","sfx3","sfx4","sfx5","sfx6","sfx7","sfx8","sfx9","sfx10","cancel","checkpoint","restart","win","message","again"];
 
@@ -1402,6 +1402,10 @@ var dirMasks = {
 	'randomdir': parseInt('00101', 2),
 	'random' : parseInt('10010',2),
 	'action' : parseInt('10000', 2),
+	'actionup' : parseInt('100000', 2),
+	'actiondown' : parseInt('1000000', 2),
+	'actionleft' : parseInt('10000000', 2),
+	'actionright' : parseInt('100000000', 2),
 	'' : parseInt('00000',2)
 };
 
@@ -2251,6 +2255,7 @@ function generateSoundData(state) {
 				verb='move';
 				directions=['___action____'];
 			}
+			
 
 			if (directions.length==0) {
 				directions=["orthogonal"];

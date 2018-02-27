@@ -2233,7 +2233,7 @@ function processInput(dir,dontCheckWin,dontModify) {
 	var bak = backupLevel();
 
 	var playerPositions=[];
-    if (dir<=4) {
+    if (dir<=8) {
     	if (dir>=0) {
 	        switch(dir){
 	            case 0://up
