@@ -54,11 +54,10 @@ var titletemplate_firstgo = [
 	"..................................",
 	"..........#.start game.#..........",
 	"..................................",
-	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select0 = [
 	"..................................",
@@ -70,10 +69,10 @@ var titletemplate_select0 = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select1 = [
 	"..................................",
@@ -85,10 +84,10 @@ var titletemplate_select1 = [
 	"..................................",
 	"...........#.continue.#...........",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start......................",
+	".Z to undo, R to restart.........."];
 
 
 var titletemplate_firstgo_selected = [
@@ -101,10 +100,10 @@ var titletemplate_firstgo_selected = [
 	"###########.start game.###########",
 	"..................................",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select0_selected = [
 	"..................................",
@@ -116,10 +115,10 @@ var titletemplate_select0_selected = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select1_selected = [
 	"..................................",
@@ -131,10 +130,10 @@ var titletemplate_select1_selected = [
 	"..................................",
 	"############.continue.############",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start......................",
+	".Z to undo, R to restart.........."];
 
 var titleImage=[];
 var titleWidth=titletemplate_select1[0].length;

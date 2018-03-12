@@ -10,6 +10,7 @@ body {
 	font-family:"Courier New", Courier, monospace
 }
 #gameCanvas {
+  display:none;
   position:absolute;
   top: 0px;
   left: 0px;
@@ -67,11 +68,22 @@ a {
 	bottom:70px;
 }
 
+#splashImg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+	height: 100%;
+	bottom: 0px;
+	right: 0px;
+	border: 0px;
+}
+
 </style>
 </head>
 <body>
-<div class="title"><h1>__GAMETITLE__</h1></div>
 <div class="gameContainer">
+	<img id="splashImg" src="splash.jpg" />
 <canvas 
     id="gameCanvas" 
     onmousemove="mouseMove(event)" 
@@ -99,6 +111,13 @@ a {
 <script src="js/mobile.js"></script>
 
 <script src="js/gamedat.js"></script>
+
+<script>
+	setTimeout(function(){
+		document.querySelector("#gameCanvas").style.display="inherit";
+		document.querySelector('#splashImg').remove();
+	},2500);
+</script> 
 
 </body>
 </html>
