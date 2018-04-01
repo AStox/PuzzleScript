@@ -56,8 +56,9 @@ var titletemplate_firstgo = [
 	"..................................",
 	".arrow keys to move ghost.........",
 	".WASD keys to move light..........",
-	".X to start......................",
-	".Z to undo, R to restart.........."];
+	".X to start.......................",
+	".Z to undo, R to restart..........",
+	".................................."];
 
 var titletemplate_select0 = [
 	"..................................",
@@ -71,7 +72,7 @@ var titletemplate_select0 = [
 	"..................................",
 	".arrow keys to move ghost.........",
 	".WASD keys to move light..........",
-	".X to start......................",
+	".X to start.......................",
 	".Z to undo, R to restart.........."];
 
 var titletemplate_select1 = [
@@ -86,7 +87,7 @@ var titletemplate_select1 = [
 	"..................................",
 	".arrow keys to move ghost.........",
 	".WASD keys to move light..........",
-	".X to start......................",
+	".X to start.......................",
 	".Z to undo, R to restart.........."];
 
 
@@ -102,7 +103,7 @@ var titletemplate_firstgo_selected = [
 	"..................................",
 	".arrow keys to move ghost.........",
 	".WASD keys to move light..........",
-	".X to start......................",
+	".X to start.......................",
 	".Z to undo, R to restart.........."];
 
 var titletemplate_select0_selected = [
@@ -117,7 +118,7 @@ var titletemplate_select0_selected = [
 	"..................................",
 	".arrow keys to move ghost.........",
 	".WASD keys to move light..........",
-	".X to start......................",
+	".X to start.......................",
 	".Z to undo, R to restart.........."];
 
 var titletemplate_select1_selected = [
@@ -132,7 +133,7 @@ var titletemplate_select1_selected = [
 	"..................................",
 	".arrow keys to move ghost.........",
 	".WASD keys to move light..........",
-	".X to start......................",
+	".X to start.......................",
 	".Z to undo, R to restart.........."];
 
 var titleImage=[];
