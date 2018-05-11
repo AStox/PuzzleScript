@@ -202,11 +202,6 @@ function redraw() {
 
         for (var i = 0; i < titleWidth; i++) {
             for (var j = 0; j < titleHeight; j++) {
-                console.log("i: " + i);
-                console.log("titleWidth: " + titleWidth);
-                console.log("j: " + j);
-                console.log("titleHeight: " + titleHeight);
-                console.log(titleImage[j-1]);
                 var ch = titleImage[j].charAt(i);
                 if (ch in textImages) {
                     var sprite = textImages[ch];

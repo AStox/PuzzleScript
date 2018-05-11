@@ -68,7 +68,7 @@ a {
 	bottom:70px;
 }
 
-#splashImg {
+#video {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -77,22 +77,35 @@ a {
 	bottom: 0px;
 	right: 0px;
 	border: 0px;
+	display:none;
+}
+
+#playbutton {
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	height:15%;
 }
 
 </style>
 </head>
 <body>
 <div class="gameContainer">
-	<img id="splashImg" src="splash.jpg" />
+	<!-- <img id="splashImg" src="splash.jpg" /> -->
 <canvas 
     id="gameCanvas" 
     onmousemove="mouseMove(event)" 
     onmouseout="mouseOut()"
-    onkeydown="keyDown()"
+	onkeydown="keyDown()"
 ></canvas>
 </div> 
 <div class="footer">
-<span id="errormessage" style="color:red;"></span>
+<!-- <span id="errormessage" style="color:red;"></span> -->
+	<a href="http://armor.ag/MoreGames">Play More Games</a><br><br>
+	<a href="http://www.facebook.com/ArmorGames">Like Us!</a>
 </div>
 
 <script src="js/globalVariables.js"></script>
@@ -112,12 +125,28 @@ a {
 
 <script src="js/gamedat.js"></script>
 
-<!-- <script>
-	setTimeout(function(){
-		document.querySelector("#gameCanvas").style.display="inherit";
-		document.querySelector('#splashImg').remove();
-	},2500);
-</script>  -->
+<img id="playbutton" src="playbutton.png">
+<video id="video" width="648" height="432" margins="auto">
+	<source src="http://files.armorgames.com/intro/648x432_v1.m4v" type="video/mp4">
+</video>
+<script>
+	var video = document.getElementById('video');
+	document.getElementById('playbutton').onclick = function(){
+		document.getElementById('playbutton').remove();
+		video.style.display = "inherit";
+		video.play();
+	};
+
+	video.onclick = function(){
+		video.remove();
+		document.getElementById('gameCanvas').style.display="inherit";
+	};
+
+    video.onended = function(e) {
+		video.remove();
+		document.getElementById('gameCanvas').style.display="inherit";
+    };
+</script> 
 
 </body>
 </html>

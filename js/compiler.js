@@ -2074,7 +2074,7 @@ function printRules(state) {
 }
 
 function removeDuplicateRules(state) {
-	console.log("rule count before = " +state.rules.length);
+	// console.log("rule count before = " +state.rules.length);
 	var record = {};
 	var newrules=[];
 	var lastgroupnumber=-1;
@@ -2419,7 +2419,7 @@ function formatHomePage(state){
 var MAX_ERRORS=5;
 function loadFile(str) {
 	window.console.log('loadFile');
-	window.console.log(str);
+	// window.console.log(str);
 
 	var processor = new codeMirrorFn();
 	var state = processor.startState();
@@ -2447,9 +2447,7 @@ function loadFile(str) {
 	levelsToArray(state);
 	rulesToArray(state);
 
-	window.console.log(state);
 	removeDuplicateRules(state);
-	window.console.log(state);
 	
 	if (debugMode) {
 		printRules(state);
@@ -2526,7 +2524,7 @@ function compile(command,text,randomseed) {
 	{
 		var state = loadFile(text);
 //		consolePrint(JSON.stringify(state));
-		window.console.log(JSON.stringify(state));
+		// window.console.log(JSON.stringify(state));
 	} finally {
 		compiling = false;
 	}
@@ -2559,7 +2557,6 @@ function compile(command,text,randomseed) {
 
 		}
 	}
-	window.console.log(state)
 	setGameState(state,command,randomseed);
 
 	clearInputHistory();

@@ -562,8 +562,6 @@ function level4Serialization() {
 }
 
 function setGameState(_state, command, randomseed) {
-	window.console.log(_state);
-	window.console.log(command);
 	oldflickscreendat=[];
 	timer=0;
 	autotick=0;
@@ -589,7 +587,7 @@ function setGameState(_state, command, randomseed) {
 
 	state = _state;
 
-    window.console.log('setting game state :D ');
+    // window.console.log('setting game state :D ');
     if (command[0]!=="rebuild"){
     	backups=[];
     }
